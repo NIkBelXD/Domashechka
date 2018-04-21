@@ -7,6 +7,8 @@ package dzz;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -29,6 +31,22 @@ public class DZz {
         Group group3 = new Group();
         Student student1 = new Student();
         Student student2 = new Student();
+        
+        try {
+            group2.setScore(9);
+        } catch (Exception ex) {
+            Logger.getLogger(DZz.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        System.out.println(group2.getScore());
+        
+        try {
+            group3.setScore(19);
+        } catch (Exception ex) {
+            //Logger.getLogger(DZz.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(ex.getMessage());
+        }
+        System.out.println(group3.getScore());
         
         try {
             //group1.id = 100;
@@ -81,6 +99,15 @@ public class DZz {
         group1.SVH1018 = 1445;
         
         System.out.println(group1.SVH1018);*/
+        
+        List<Group> groups = new ArrayList<>();
+        groups.add(group1);
+        groups.add(group2);
+        groups.add(group3);
+        
+        for (Group group : groups) {
+            System.out.println(group.getScore());
+        }
     }
     
 }

@@ -22,10 +22,24 @@ public class Group {
     //Задание - пункт 1:
     //добавить поле для объектов, которое будет хранить число -
     //средний балл успеваемости
+    private double mScore;
     
-    
+    public double getScore() {
+        return mScore;
+    }
+
     //Задание - пункт 2:
     //добавить методы чтения и установки для поля балла успеваемости
+    public void setScore(double _score) throws Exception {
+        
+        if (_score <= 12 && _score >= 4) {
+            mScore = _score;
+        } else {
+        
+            throw new Exception("Средний балл должен быть в диапазоне от 4 до 12");
+        }
+        
+    }
     
     //Поле класса Group
     private static int newId = 1;
