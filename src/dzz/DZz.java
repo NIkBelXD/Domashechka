@@ -7,6 +7,8 @@ package dzz;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author nikit
@@ -18,12 +20,49 @@ public class DZz {
      */
     public static void main(String[] args) {
         
+        //Задание - пункт 3:
+        //записать число - средний балл - в каждую из групп
+        //, затем - вывод этимх данных в консоль из всех трех групп
         
         Group group1 = new Group();
+        Group group2 = new Group("МА 13-12");
+        Group group3 = new Group();
         Student student1 = new Student();
         Student student2 = new Student();
         
-        student1.NIkita = 10;
+        try {
+            //group1.id = 100;
+            //group1.mName = "СВШ 10-18";
+            group1.setName("СВШ 10-18");
+        } catch (Exception ex) {
+            
+            System.out.println(ex.getMessage());
+        }
+        try {
+            //****
+            group1.setName("asdfcdgfd b gfnhgm dbfhjh");
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        
+        //student1.id = 1;
+        student1.name = "Имя1";
+        student1.group_id = 100;
+        
+        //student2.id = 2;
+        student2.name = "Имя2";
+        student2.group_id = 100;
+        
+        //System.out.println(group1.id);
+        //System.out.println(group2.id);
+                
+        //System.out.println(group1.getId());
+        //System.out.println(group2.getId());
+        //System.out.println(group3.getId());
+        
+        System.out.println(group1.getName());
+        
+        /*student1.NIkita = 10;
         student1.Maxim = 6;
         student1.Artiem = 8;
         
@@ -41,7 +80,7 @@ public class DZz {
         
         group1.SVH1018 = 1445;
         
-        System.out.println(group1.SVH1018);
+        System.out.println(group1.SVH1018);*/
     }
     
 }

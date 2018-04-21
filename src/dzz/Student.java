@@ -10,7 +10,12 @@ package dzz;
  * @author nikit
  */
 public class Student {
-    public int NIkita;
-    public int Maxim;
-    public int Artiem;
+    
+    //public int NIkita;
+    //public int Maxim;
+    //public int Artiem;
+    public int id;
+    public String name;
+    public int group_id;
+    
 }
